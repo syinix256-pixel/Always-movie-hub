@@ -3,58 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Streaming App</title>
+    <title>Always Movie Hub</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
+            transition: background-color 0.5s;
         }
-        header {
-            background: #35424a;
+        body.light-mode {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        body.dark-mode {
+            background-color: #333333;
             color: #ffffff;
-            padding: 10px 0;
-            text-align: center;
         }
-        #app {
-            margin: 20px auto;
-            width: 90%;
-            max-width: 800px;
-            background: #ffffff;
+        header, nav, .content, footer {
             padding: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
         }
-        .movie {
-            margin: 15px 0;
-            padding: 10px;
-            border: 1px solid #dddddd;
-        }
+        /* Additional CSS for styling */
     </style>
 </head>
-<body>
+<body class="light-mode">
     <header>
-        <h1>Movie Streaming App</h1>
+        <h1>Welcome to Always Movie Hub</h1>
+        <button id="darkModeToggle">Toggle Dark Mode</button>
     </header>
-    <div id="app">
-        <h2>Available Movies</h2>
-        <div class="movie">
-            <h3>Movie Title 1</h3>
-            <p>Description of Movie 1.</p>
-            <button onclick="playMovie('url-to-movie-1.mp4')">Play Movie 1</button>
-        </div>
-        <div class="movie">
-            <h3>Movie Title 2</h3>
-            <p>Description of Movie 2.</p>
-            <button onclick="playMovie('url-to-movie-2.mp4')">Play Movie 2</button>
-        </div>
-        <!-- Additional movies can be added here -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#browse">Browse</a></li>
+            <li><a href="#watchlist">Watchlist</a></li>
+            <li><a href="#downloads">Downloads</a></li>
+            <li><a href="#subscriptions">Subscription Plans</a></li>
+            <li><a href="#settings">Settings</a></li>
+        </ul>
+    </nav>
+    <div class="content">
+        <section id="home">
+            <h2>Home</h2>
+            <p>Your favorite movies all in one place.</p>
+        </section>
+        <section id="browse">
+            <h2>Browse Movies</h2>
+            <p>Explore our extensive library.</p>
+        </section>
+        <section id="watchlist">
+            <h2>Watchlist</h2>
+            <p>Your saved movies to watch later.</p>
+        </section>
+        <section id="downloads">
+            <h2>Downloads</h2>
+            <p>Manage your downloaded movies.</p>
+        </section>
+        <section id="subscriptions">
+            <h2>Subscription Plans</h2>
+            <p>Choose the plan that's right for you.</p>
+        </section>
+        <section id="settings">
+            <h2>Settings</h2>
+            <p>Configure your preferences.</p>
+        </section>
     </div>
+    <footer>
+        <p>&copy; 2026 Always Movie Hub</p>
+    </footer>
     <script>
-        function playMovie(url) {
-            // Logic to play movie
-            alert('Playing movie: ' + url);
-        }
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            document.body.classList.toggle('light-mode');
+        });
+        // Additional JavaScript functionality for mobile money payments, etc.
     </script>
 </body>
 </html>

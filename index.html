@@ -3,24 +3,58 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Always Movie Hub</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Movie Streaming App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+        }
+        header {
+            background: #35424a;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        #app {
+            margin: 20px auto;
+            width: 90%;
+            max-width: 800px;
+            background: #ffffff;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .movie {
+            margin: 15px 0;
+            padding: 10px;
+            border: 1px solid #dddddd;
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Always Movie Hub</h1>
+        <h1>Movie Streaming App</h1>
     </header>
-    <main>
-        <section id="movies">
-            <h2>Featured Movies</h2>
-            <div class="movie-list">
-                <!-- Movie items will go here -->
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Always Movie Hub</p>
-    </footer>
-    <script src="script.js"></script>
+    <div id="app">
+        <h2>Available Movies</h2>
+        <div class="movie">
+            <h3>Movie Title 1</h3>
+            <p>Description of Movie 1.</p>
+            <button onclick="playMovie('url-to-movie-1.mp4')">Play Movie 1</button>
+        </div>
+        <div class="movie">
+            <h3>Movie Title 2</h3>
+            <p>Description of Movie 2.</p>
+            <button onclick="playMovie('url-to-movie-2.mp4')">Play Movie 2</button>
+        </div>
+        <!-- Additional movies can be added here -->
+    </div>
+    <script>
+        function playMovie(url) {
+            // Logic to play movie
+            alert('Playing movie: ' + url);
+        }
+    </script>
 </body>
 </html>
